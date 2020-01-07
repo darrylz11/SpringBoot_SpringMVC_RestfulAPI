@@ -26,4 +26,22 @@ public class HelloService {
 		
 	}
 
+
+	public void updatemovie(Movie movie, String id) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<movieList.size();i++) {
+			System.out.println("inside update"+id);
+			System.out.println("movie is"+movie);
+			Movie m=movieList.get(i);
+			System.out.println("movie is 2"+m);
+			int year=m.getYear();
+			System.out.println("year is"+year);
+			if(id.equalsIgnoreCase(String.valueOf(year))) {
+				System.out.println("inside if");
+				movieList.set(i, movie);
+			}
+		}
+		
+	}
+
 }
